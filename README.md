@@ -1,2 +1,3 @@
 # A-simulation-game-of-human-society-by-using-game-theory-Prisoner-Dilemma-
-This project implement game theory by using C++
+This project implements game theory using C++
+This is a C++ simulator of a Prisoner's Dilemma tournament. Seven strategies (always cooperate, always cheat, random, grudger, tit-for-tat, and more) each start with 50 players who face one another in repeated matches, with a 3% chance of an accidental wrong move. After every round, the six lowest scorers are eliminated and replaced by copies of the top-scoring strategy. Over 80 rounds, a live terminal histogram shows each strategy's population share, revealing which approach survives best in the long run.
