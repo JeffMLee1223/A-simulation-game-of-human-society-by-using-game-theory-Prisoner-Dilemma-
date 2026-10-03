@@ -1,10 +1,12 @@
-#ifndef __UTILS_H__
-#define __UTILS_H__
+#ifndef UTILS_H
+#define UTILS_H
 
-// for C++11 compatability. Use only with -std=c++11
-#define Rwrap(a, b, c) Ge##a(b, c)
-#define RGenMT19937(x, y) Rwrap(tRandom, y, x)
+#include <random>
 
-int GetRandom(int min, int max);
+// 回傳 [min, max) 的隨機整數
+inline int GetRandom(int min, int max) {
+  static std::mt19937 gen(3278);  // 固定 seed，結果可重現
+  return std::uniform_int_distribution<int>(min, max - 1)(gen);
+}
 
 #endif
